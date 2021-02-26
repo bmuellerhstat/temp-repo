@@ -1,0 +1,422 @@
+    1  ls -al
+    2  ls
+    3  ls -al
+    4  cd ..
+    5  ls
+    6  cd
+    7  ls
+    8  ls -al
+    9  git config --global user.name
+   10  git config --global user.name "Mr. Mueller"
+   11  git config --global user.email "bmueller@hstat.org
+   12  "
+   13  git config --global user.email
+   14  git config --global user.email "bmueller@hstat.org"
+   15  git config --global user.email
+   16  echo -e "\n" | ssh-keygen -t rsa -N ""
+   17  cat ~/.ssh/id_rsa.pub
+   18  echo 'Host github.com' >> ~/.ssh/config
+   19  echo ' Hostname ssh.github.com' >> ~/.ssh/config
+   20  echo ' Port 443' >> ~/.ssh/config
+   21  echo ' StrictHostKeyChecking no' >> ~/.ssh/config
+   22  ssh -T git@github.com
+   23  cd hstatsep/ide50/
+   24  git status
+   25  git add .
+   26  git commit -m "update file paths"
+   27  git push
+   28  cd
+   29  cd hstatsep/ide50/
+   30  git status
+   31  git add .
+   32  git commit -m "update ~"
+   33  git push
+   34  ls -al ~
+   35  ls -al ~/.ssh/
+   36  cat ~/.ssh/config 
+   37  cd ~
+   38  ls -al
+   39  echo 'alias gp="git add .' >> ~/.bash_profile
+   40  echo 'git commit -m \'update repo\''>> ~/.bash_profile
+   41  echo 'git push"' >> ~/.bash_profile
+   42  c9 ~/.bash_profile 
+   43  echo "alias gp=\'git add .' >> ~/.bash_profile
+   44  echo "git commit -m \'update repo\'>> ~/.bash_profile
+   45  echo "git push\'" >> ~/.bash_profile
+   46  echo "alias gp=\'git add ." >> ~/.bash_profile
+   47  echo "git commit -m \'update repo\'>> ~/.bash_profile
+   48  echo "git push\'" >> ~/.bash_profile
+   49  "
+   50  echo "alias gp=\"git add ." >> ~/.bash_profile
+   51  echo "git commit -m 'update repo'>> ~/.bash_profile
+   52  echo "alias gp=\"git add ." >> ~/.bash_profile
+   53  echo "git commit -m 'update repo' >> ~/.bash_profile
+   54  echo "git push\"" >> ~/.bash_profile
+   55  echo "alias gp=\"git add ." >> ~/.bash_profile
+   56  echo "git commit -m 'update repo'" >> ~/.bash_profile
+   57  echo "git push\"" >> ~/.bash_profile
+   58  gp
+   59  git status
+   60  gp
+   61  cd hstatsep
+   62  ls
+   63  cd ide50/
+   64  ls
+   65  cd ..
+   66  git clone git@github.com:hstatsep/js.git
+   67  cd js
+   68  c9 README.md 
+   69  git status
+   70  gp
+   71  cd ../ide50/
+   72  c9 README.md 
+   73  gp
+   74  c9 README.md 
+   75  gp
+   76  cd ..
+   77  cd js
+   78  git status
+   79  gp
+   80  cd ~/hstatsep-js/
+   81  git clone git@github.com:hstatsep-js/hello-world.git
+   82  cd hello-world/
+   83  cp -r ~/hstatsep/js/templateFolder/ .
+   84  ls
+   85  rm -rf templateFolder/
+   86  cp -r ~/hstatsep/js/templateFolder/. .
+   87  ls
+   88  c9 index.html 
+   89  c9 script.js 
+   90  git status
+   91  gp
+   92  cd ..
+   93  cd hstatsep/js
+   94  ls
+   95  c9 README.md 
+   96  gp
+   97  git status
+   98  gp
+   99  ls -al
+  100  ssh -T git@github.com
+  101  cd web-design/
+  102  ls
+  103  git clone git@github.com:bmuellerhstat/github-demo.git
+  104  cd github-demo/
+  105  ls
+  106  c9 index.html 
+  107  cd ..
+  108  rm -rf github-demo/
+  109  cd ~
+  110  git clone git@github.com:bmuellerhstat/github-demo.git
+  111  cd github-
+  112  cd github-demo/
+  113  ls
+  114  c9 index.html 
+  115  git status
+  116  git add .
+  117  git commit -m "add hello"
+  118  git push
+  119  git log
+  120  git revert e7eef292201e25c426fa2ed6c5cad80fd814bdca
+  121  git push
+  122  git status
+  123  git checkout index.html
+  124  git status
+  125  cd ..
+  126  rm -rf github-demo/
+  127  ls github-learning/
+  128  ls
+  129  rm -rf nyc/
+  130  mkdir nyc
+  131  cd nyc
+  132  mkdir brooklyn queens staten-island the-bronx manhattan
+  133  cd ..
+  134  rm -rf nyc/
+  135  mkdir nyc nyc/brooklyn nyc/brooklyn/bay-ridge nyc/brooklyn/bay-ridge/fort-hamilton nyc/brooklyn/bay-ridge/hstat nyc/brooklyn/sunset-park nyc/manhattan nyc/queens nyc/staten-island nyc/the-bronx
+  136  rm -rf nyc/
+  137  pwd
+  138  cd github-learning/
+  139  pwd
+  140  cd ..
+  141  git clone git@github.com:bmuellerhstat/github-demo.git
+  142  cd github-
+  143  cd github-demo/
+  144  c9 index.html 
+  145  touch style.css script.js
+  146  mkdir img
+  147  touch img/.keep
+  148  git status
+  149  git add .
+  150  git commit -m "add hello"
+  151  push
+  152  git push
+  153  git add .
+  154  git commit -m "h1s red"
+  155  git push
+  156  git log
+  157  history
+  158  cd ..
+  159  mkdir nyc nyc/brooklyn nyc/brooklyn/bay-ridge nyc/brooklyn/bay-ridge/fort-hamilton nyc/brooklyn/bay-ridge/hstat nyc/brooklyn/sunset-park nyc/manhattan nyc/queens nyc/staten-island nyc/the-bronx
+  160  pwd
+  161  cd github-demo/
+  162  git log
+  163  git revert HEAD
+  164  git status
+  165  git push
+  166  cd ..
+  167  rm -rf github-demo/
+  168  git clone git@github.com:bmuellerhstat/github-demo.git
+  169  cd github-demo/
+  170  git log
+  171  git revert 682532841ac55a5458470c7a3252e35661c2314c
+  172  git status
+  173  git add .
+  174  git commit -m "revert"
+  175  git status
+  176  ls
+  177  rm style.css 
+  178  git add .
+  179  git commit -m "delete css"
+  180  git push
+  181  cd ..
+  182  rm -rf github-demo/
+  183  git clone git@github.com:bmuellerhstat/github-demo.git
+  184  cd github-demo/
+  185  c9 index.html 
+  186  touch script.js style.css
+  187  c9 style.css 
+  188  mkdir img
+  189  touch img/.keep
+  190  git add .
+  191  git commit -m "add hello"
+  192  git push
+  193  git add .
+  194  git commit -m "change red to blue"
+  195  git push
+  196  cd ..
+  197  mkdir nyc nyc/brooklyn nyc/brooklyn/bay-ridge nyc/brooklyn/bay-ridge/fort-hamilton nyc/brooklyn/bay-ridge/hstat nyc/brooklyn/sunset-park nyc/manhattan nyc/queens nyc/staten-island nyc/the-bronx
+  198  pwd
+  199  cd github-demo/
+  200  git log
+  201  git revert HEAD
+  202  git log
+  203  git revert 814b402af1f369ca5e1db04a6957c5cdd6631ee4
+  204  git status
+  205  git push
+  206  cd ..
+  207  rm -rf github-demo/
+  208  cd js
+  209  git clone git@github.com:hstatsep/js.git
+  210  cd js
+  211  rm -rf .git
+  212  ls
+  213  cd classwork/
+  214  cd ..
+  215  cp templateFile.html classwork/loops-cc.html
+  216  cd classwork/
+  217  mv loops-cc.html loops-cc-border.html
+  218  c9 loops-cc-border.html 
+  219  cd hstatsep
+  220  ls
+  221  git clone git@github.com:hstatsep/web.git
+  222  cd web
+  223  git status
+  224  git add .
+  225  git commit -m "update template"
+  226  git status
+  227  git add .
+  228  git commit -m "remove 'template'"
+  229  git push
+  230  git status
+  231  git add .
+  232  git commit -m "add external sources"
+  233  git push
+  234  cd ..
+  235  mkdir nyc/staten-island/sith
+  236  cd js/classwork/
+  237  git clone git@github.com:hstatsep-js/fibs.git
+  238  cd fibs/
+  239  cd ..
+  240  cd fibs/
+  241  cd ..
+  242  rm -rf fibs/
+  243  cd !
+  244  cd ~
+  245  cd js/classwork/
+  246  git clone git@github.com:hstatsep-js/fibs.git
+  247  rm -rf fibs/
+  248  git clone git@github.com:hstatsep-js/fibs.git
+  249  rm -rf fibs/
+  250  mv mfa-github-demo/ other/
+  251  git status
+  252  cd hstatsep/ide50/
+  253  git status
+  254  cd hstatsep/ide50/
+  255  git status
+  256  cd ..
+  257  ls
+  258  git clone git@github.com:bmuellerhstat/wd.git
+  259  rm -rf wd/README.md 
+  260  cp -r js/* wd
+  261  cd wd
+  262  ls
+  263  git status
+  264  git add .
+  265  git commit -m "setup files"
+  266  git push
+  267  cd ..
+  268  mkdir wd
+  269  rm -rf wd
+  270  mkdir hstatsep-wd
+  271  cd hstatsep-wd
+  272  cd ~
+  273  cp -r hstatsep/web hstatsep-wd/hello-world
+  274  cd hstatsep-wd
+  275  rm -rf *
+  276  git clone git@github.com:hstatsep-wd/hello-world.git
+  277  ls
+  278  cd hello-world/
+  279  git status
+  280  git add .
+  281  git commit -m "add directions"
+  282  git push
+  283  git status
+  284  git add .
+  285  git commit -m "add commands to push"
+  286  git push
+  287  cd ~
+  288  mkdir wd
+  289  cd web-design/
+  290  ls
+  291  cd ..
+  292  mv web-design/ wd-archive
+  293  clear
+  294  cd hstatsep/wd
+  295  ls
+  296  git status
+  297  git remote -v
+  298  cd ..
+  299  rm -rf wd
+  300  git clone git@github.com:hstatsep/wd.git
+  301  cd ..
+  302  cd hstatsep/wd/
+  303  ls
+  304  c9 README.md 
+  305  cd ~
+  306  rmdir wd
+  307  git clone git@github.com:hstatsep/wd.git
+  308  cd wd
+  309  rm -rf .git
+  310  cd hstatsep-wd/hello-world/
+  311  git status
+  312  git add .
+  313  git commit -m "add cloning directions"
+  314  git push
+  315  cd ~
+  316  cd hstatsep-js/
+  317  ls
+  318  git clone git@github.com:hstatsep-js/objects-cc.git
+  319  cd objects-cc/
+  320  ls
+  321  mkdir img
+  322  git status
+  323  git add .
+  324  git status
+  325  git restore --staged script.js
+  326  git status
+  327  git add .
+  328  git status
+  329  git restore --staged script.js
+  330  git status
+  331  git commit -m "test image"
+  332  git push
+  333  git add script.js 
+  334  git commit -m "starter code"
+  335  touch script-done.js
+  336  git status
+  337  git restore script.js
+  338  git status
+  339  git add README.md img/* index.html 
+  340  git status
+  341  git commit -m "add 3 tasks"
+  342  git push
+  343  git status
+  344  giit add README.md 
+  345  git commit -m "fix typos"
+  346  git add README.md 
+  347  git commit -m "fix typos"
+  348  git status
+  349  git push
+  350  git status
+  351  git statu
+  352  git status
+  353  git add index.html 
+  354  git commit -m "switch to student-facing JS"
+  355  git push
+  356  git status
+  357  git add README.md 
+  358  git commit -m "clarify task 2 comments"
+  359  git push
+  360  cd hstatsep-js/objects-cc/
+  361  c9 README.md 
+  362  git status
+  363  git add README.md 
+  364  git commit -m "clarify starter code"
+  365  git push
+  366  cd hstatsep-wd/
+  367  git clone git@github.com:hstatsep-wd/cli-music.git
+  368  cd cli-music/
+  369  c9 README.md 
+  370  rm -rf index.html script.js style.css 
+  371  ls
+  372  mkdir country
+  373  mkdir hip-hop rap rock
+  374  touch commands.txt
+  375  touch country/taylor-swift.txt
+  376  mkdir hip-hop/east-coast hip-hop/west-coast
+  377  touch hip-hop/east-coast/public-enemy.txt hip-hop/east-coast/grandmaster-flash.txt
+  378  touch hip-hop/west-coast/dr-dre.txt hip-hop/west-coast/ice-cube.txt
+  379  touch rap/eminem.txt rap/jay-z.txt rap/notorious-big.txt rock/blink-182.txt rock/nirvana.txt
+  380  git status
+  381  git add .
+  382  git commit -m "setup files/folders"
+  383  git push
+  384  rm -rf rock
+  385  git status
+  386  git restore *
+  387  git status
+  388  git restore .
+  389  git status
+  390  mkdir punk-rock
+  391  git status
+  392  git restore .
+  393  rmdir punk-rock/
+  394  git status
+  395  rm -rf hip-hop/
+  396  git restore .
+  397  mv country/ pop
+  398  git restore .
+  399  git status
+  400  rm -rf pop
+  401  git status
+  402  git restore .
+  403  mv country pop
+  404  git restore .
+  405  rm -rf pop
+  406  history
+  407  echo .bash_history 
+  408  cat .bash_history 
+  409  cd hstatsep-wd/
+  410  cd cli-music/
+  411  ~/.bash_history >> commands.txt 
+  412  cd ~
+  413  ls -al
+  414  cat .bash_history 
+  415  cd hstatsep-wd/cli-music/
+  416  echo ~/.bash_history >> commands.txt 
+  417  /home/ubuntu/.bash_history >> commands.txt
+  418  history >> commands.txt
+  419  cd ..
+  420  git clone git@github.com:bmuellerhstat/temp-repo.git
+  421  cd temp-repo/
+  422  history >> commands.txt
