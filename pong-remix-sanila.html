@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <style>
+            /* CSS */
+            @import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+
+            h1 {
+              padding-left: 20px;
+              position : relative;
+              left: 10px;
+              top: 10px;
+            }
+
+            h3 {
+              padding-left: 25px;
+              position : relative;
+              left: 10px;
+              top: 15px;
+            }
+
+            p {
+              padding-left: 25px;
+              position : relative;
+              left: 10px;
+              top: 25px;
+            }
+
+            li {
+              padding-left: 20px;
+              position : relative;
+              left: 10px;
+              top: 15px;
+            }
+
+        </style>
+
+        <title>Title</title>
+    </head>
+    <body>
+        <!-- HTML -->
+        <h1>Welcome to Super Mario Pong!</h1>
+        <h3>Click to start</h3>
+        <h3>Press spacebar to pause the game</h3>
+        <h3>Press enter/return to resume</h3>
+
+        <p><u>Remixes:</u></p>
+        <ul>
+          <li>Scores & lives</li>
+          <li>Paddle get shorter every time the ball bounces off the paddle</li>
+          <li>User clicks the mouse to start the game</li>
+          <li>Pause feature</li>
+        </ul>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+        <script>
+            // JS
+
+           var ballX;
+           var ballY;
+           var ballSpeedX = 5; // ball's x-speed
+           var ballSpeedY = 5; // ball's y-speed
+           var paddleHeight = 30; // height of paddle
+           var paddleWidth = 200; // width of paddle
+           var score = 0; // starting number for score
+           var lives = 10; // starting number for lives
+           var bg; // background
+           var img; // image
+           var secondImg // second image
+
+
+          function preload() {
+            img = loadImage('mario.png'); // mario
+            secondImg = loadImage('https://art.pixilart.com/a69424f53393630.png') // mario rectangle brick block
+            }
+
+          function setup() {
+            canvas = createCanvas(800, 600);
+            bg = loadImage('https://wallup.net/wp-content/uploads/2017/11/16/172211-Super_Mario_Bros.-minimalism-748x561.jpg') // mario land background
+            noCursor(); // doesn't show cursor
+            ballX = random(width); // puts the ball in the middle of the screen horizontally
+            ballY = random(height/2); // puts the ball randomly in the top-half of the screen vertically
+            }
+
+          function draw() {
+            background(bg)
+
+            if (mouseButton) { // when user press their mouse (p5js tracks when mouse button is pressed)
+              welcomeText = false; // message goes away
+              // game begins
+              moveBall(); // function to move ball
+              checkCollide(); // function to check collision
+              drawPaddle(); // function to draw paddle
+              drawBall(); // function to draw ball
+
+              // display scores and lives
+              stroke(29, 53, 87); // dark blue
+              strokeWeight(4);
+              fill(255)
+              textFont('Concert One')
+              textSize(35);
+              textAlign(LEFT);
+              text("Score: " + score, 28, 70)
+              text("Lives : " + lives, 610, 70)
+            }
+          }
+
+
+          function moveBall() {
+            ballX = ballX + ballSpeedX; // direction of ballX
+            ballY = ballY + ballSpeedY; // direction of ballY
+
+            console.log("ballSpeedX: " + ballSpeedX + ", ballSpeedY: " + ballSpeedY); // shows ball's speed in console
+          }
+
+          function checkCollide() {
+            if (ballX < 0 || ballX > width) { // if ball hits left or right edge of canvas
+              ballSpeedX = ballSpeedX * -1; // ball’s x-speed reverse, ball bounce
+            }
+            if (ballY < 0) { // if ball hits top of canvas
+               ballSpeedY = ballSpeedY * -1; // ball’s y-speed reverse, ball bounce
+            }
+            if (ballY > height - paddleHeight - 50) { // if mario passes goal line
+              if (ballX > mouseX && ballX < mouseX + 150) { // if mario hits within the paddle
+                ballSpeedY = ballSpeedY * -1; // ball’s y-speed reverse, ball bounce
+
+                // HOWEVER...
+                paddleWidth = paddleWidth/1.1 ; // width of paddle gets shorter
+
+                score++ // score increases
+
+              } else if (ballX > mouseX || ballX < mouseX + 200) { // if ball doesn't hit within the paddle
+                  // game will keep going
+                  ballSpeedY = ballSpeedY * -1; // ball’s y-speed reverse, ball bounce
+
+                  // BUT...
+                  lives-- // lives decrease
+              }
+
+              if (lives == 0) { // when all lives are gone
+                background(255, 0, 0); // red
+                textAlign(CENTER);
+                stroke(29, 53, 87); // dark blue
+                strokeWeight(4);
+                fill(255)
+                textSize(30)
+                text("GAME OVER!", width / 2, height/2.14); // game over
+                text("Score: " + score, width/2, height/1.875); // display user's score
+                score = 0; // score resets to 0
+                noLoop(); // game stops
+              }
+            }
+          }
+
+          // pause feature
+          function keyTyped () {
+            if(keyCode == 32) { // spacebar
+                noLoop(); // game stops
+            } else if (keyCode === 13) { // enter/return key
+                if(lives <= 0) { // constrain lives to be negative
+                  noLoop(); // game stops, enter/return key won't work
+                } else {
+                  loop(); // game runs
+                }
+              }
+          }
+
+
+          function drawBall() {
+            image(img, ballX, ballY, 60, 60); // mario is drawn
+          }
+
+
+          function drawPaddle() {
+            image(secondImg, mouseX, height - paddleHeight - 8, paddleWidth, paddleHeight + 200) // brick block is drawn
+          }
+
+
+
+        </script>
+    </body>
+</html>
