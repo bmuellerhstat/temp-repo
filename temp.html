@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreeCodeCamp User Data</title>
+</head>
+<body>
+    <h1>FreeCodeCamp User Data Logger</h1>
+    <p>Open your browser's console to see the output.</p>
+
+    <script>
+
+        // Replace with the student's username
+        const username = 'aymena9356';
+
+        // Function to fetch FreeCodeCamp data for the user
+        async function logFCCUserData(username) {
+            const url = `https://www.freecodecamp.org/api/users/get-public-profile?username=${username}`;
+            try {
+                const response = await fetch(url);
+                if (!response.ok) {
+                    throw new Error(`Error fetching data for ${username}: ${response.statusText}`);
+                }
+                const data = await response.json();
+                
+                // Log the entire JSON response to the console
+                console.log(data);
+
+            } catch (error) {
+                console.error(`Error: ${error.message}`);
+            }
+        }
+
+        // Fetch and log the user data when the page loads
+        logFCCUserData(username);
+
+
+    </script>
+</body>
+</html>
